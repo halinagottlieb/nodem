@@ -1,0 +1,31 @@
+/* overrides for the static copy: the original overlay is laid out as a page */
+body.static-repo{position:static !important;overflow:auto !important;height:auto !important;min-height:100%;}
+body.static-repo header{position:relative !important;}
+body.static-repo .mainMenu{white-space:nowrap;}
+body.static-repo .mainMenu li{display:inline-block;margin-right:14px;}
+body.static-repo #sort-container{width:auto !important;}
+body.static-repo .static-main{padding-top:150px;padding-bottom:60px;max-width:1200px;margin:0 auto;padding-left:16px;padding-right:16px;box-sizing:border-box;}
+body.static-repo .page-head{margin:0 0 16px 0;}
+body.static-repo .page-title{font-size:20px;margin:0 0 4px 0;}
+body.static-repo .static-timeline{list-style:none;padding:0;margin:0 0 16px 0;display:flex;flex-wrap:wrap;gap:6px 12px;font-size:13px;}
+body.static-repo .static-keywords{list-style:none;padding:0;columns:3 240px;}
+body.static-repo .static-keywords li{padding:2px 0;}
+body.static-repo .count{color:#888;font-size:12px;}
+body.static-repo .cardsContainer .yearBlock h1{font-size:18px;margin:24px 0 8px 0;}
+body.static-repo .cardsContainer{display:flex;flex-direction:column;}
+body.static-repo .cardsContainer .yearBlock{display:flex;flex-wrap:wrap;gap:10px;}
+body.static-repo .cardsContainer .yearBlock h1{flex-basis:100%;}
+body.static-repo .element{position:relative;width:260px;cursor:pointer;}
+body.static-repo .static-window{display:block !important;position:relative !important;height:auto !important;width:auto !important;overflow:visible !important;background:#fff;padding:16px;max-width:1100px;margin:0 auto;box-sizing:border-box;}
+body.static-repo .static-window .container{position:relative;}
+body.static-repo .static-back{margin-bottom:12px;font-size:13px;}
+body.static-repo .top-fixed{position:static !important;background:none !important;}
+body.static-repo .window-left,body.static-repo .window-right{float:none !important;width:auto !important;}
+body.static-repo .window-right{margin-top:8px;}
+body.static-repo .hMain{height:auto !important;}
+body.static-repo .tabContainer{height:auto !important;position:relative !important;}
+body.static-repo .tabContent{display:none;position:relative !important;top:auto !important;left:auto !important;height:auto !important;overflow:visible !important;width:auto !important;}
+body.static-repo .tabContent .container{height:auto !important;}
+body.static-repo .tabContent.tabContentActive{display:block;}
+body.static-repo .static-foot{text-align:center;font-size:12px;color:#777;padding:24px 16px;}
+@media (max-width:750px){ body.static-repo .static-main{padding-top:170px;} body.static-repo .element{width:100%;} }

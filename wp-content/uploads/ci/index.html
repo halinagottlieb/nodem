@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <title>design manual</title>
+ <meta http-equiv="content-type" content="text/html;charset=windows-1250">
+ <meta name="author" content="Adrian Moczulski">
+ <meta name="robots" content="noindex,nofollow">
+ <link rel="stylesheet" href="../font/stylesheet.css">
+ <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+ <script>
+ function postwith (to,p) {
+	  var myForm = document.createElement("form");
+	  myForm.method="post" ;
+	  myForm.action = to ;
+	  for (var k in p) {
+	    var myInput = document.createElement("input") ;
+	    myInput.setAttribute("name", k) ;
+	    myInput.setAttribute("value", p[k]);
+	    myForm.appendChild(myInput) ;
+	  }
+	  document.body.appendChild(myForm) ;
+	  myForm.submit() ;
+	  document.body.removeChild(myForm) ;
+}
+
+ function pokazLogin(){
+	 	  var loginBox = prompt("Please enter your password");
+		  if (loginBox!=null)
+		  {
+		  	postwith ("index.php",{'password':loginBox});
+		  }
+ }
+ </script>
+ <script type="text/javascript">
+ 	function akcja(event){
+ 	
+	 	if($(event.target).parent().hasClass('schowany')){
+	 		$(event.target).parent().removeClass('schowany');
+	 		}
+	 	else {$(event.target).parent().addClass('schowany');}
+ 	}
+ </script>
+ <style type="text/css">
+  body,p,h1,ul,li,a{
+   margin:0;
+   padding:0;
+   border:0;
+   /*background: rgba(63,63,63,0.1);*/
+  }
+  body{
+   font-family:verdana, sans-serif;
+   font-size:1em;
+   background: rgba(63,63,63,0.1);
+  }
+  #header{
+   padding:10px 20px;
+   border-bottom:1px solid #AAA;
+   margin-bottom:10px;
+  }
+  #header h1{
+   font-weight:normal;
+   color:#AAA;
+   font-size:1.4em;
+   padding:15px;
+  }
+  ul{
+   list-style:none;
+   margin:0px 0px 0px 40px;
+   padding:0;
+  }
+  ul ul{
+   margin:0px 0px 0px 80px;
+  }
+  span{
+  	  border-radius: 0px; 
+  	  margin-right: 0px !important;
+  	  box-shadow: 0px 0px 7px #bbb; 
+  	  cursor: pointer;
+  	  font-family: sans-serif;
+  }
+  .schowany{
+	  overflow: hidden;
+	  height: 32px;
+  }
+  ul li a, ul li span{
+   display:block;
+   padding:5px;
+   font-size:1em;
+   text-decoration:none;
+   margin:2px 0;
+  }
+  ul li a{
+   background-color:transparent;
+   color:#333;
+   text-decoration:none;
+   font-size: small;
+  }
+  ul li a:hover{
+   color:#555;
+   text-decoration:none;
+   background-color:gray;
+   color:#333;
+   text-decoration:none;
+   font-size: small;
+   text-shadow: 0px 0px 4px #ccc;
+  }
+  ul li span{
+   background-color: rgba(50,50,50,0.6);
+   color:#FFF;
+  }
+  p{
+   font-size:0.9em;
+   color:#AAA;
+   padding:15px;
+   clear:both;
+  }
+ </style>
+</head>
+<body>
+ <div id="header">
+  <p><a href="../../../"><img src="../../themes/leftside/images/logo.png" alt="logo" id="logo" width="150px"></a></p>
+  <h1>design manual</h1>
+ </div><br/><br/>
+ <div>
+ 	
+  <br/><br/>
+  		    <ul>
+		    	<li class="schowany"><a target="_blank" href="./manual.pdf">manual.pdf</a></li>
+		    	<li><span onclick="pokazLogin()">Source files (restricted access)</span></li>
+		    </ul>
+	     <!--<p>&copy; 2013 Studio Zamojski.</p>-->
+ </div>
+</body>
+</html>
