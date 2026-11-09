@@ -13,6 +13,10 @@ Static copy of [nodem.org](https://nodem.org/) (the NODEM Network website, origi
 
 Differences from the live repository: no login, no image lightbox, no infinite scroll, no server-side search (search runs in the browser), and no shared URL state (browse uses normal links). Video thumbnails and some external links still point to their original sites. Two author photos (Edson, and an uploaded visitor guide PDF) are missing on the live site too; the author photo falls back to the default avatar.
 
+## Local preview
+
+From the repository root, run `python3 -m http.server 8000` to preview the static site locally.
+
 ## Publishing with GitHub Pages
 
 1. Push this repository to GitHub.
